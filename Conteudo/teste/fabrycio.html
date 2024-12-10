@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+</head>
+<body>
+  <style> 
+  body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.quiz-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.question {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.answer {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: 1px solid #2980b9;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.answer:hover {
+  background-color: #2980b9;
+}
+
+  </style>
+  
+  <div class="quiz-container">
+    <h1>Quiz</h1>
+    <div class="question">What is the capital of France?</div>
+    <div class="answers">
+      <div class="answer">Paris</div>
+      <div class="answer">Berlin</div>
+      <div class="answer">London</div>
+      <div class="answer">Madrid</div>
+    </div>
+  </div>
+  <script>
+
+const answers = document.querySelectorAll('.answer');
+const question = document.querySelector('.question');
+
+// Function to check the selected answer
+function checkAnswer(event) {
+  const selectedAnswer = event.target.innerText;
+  if (selectedAnswer === "Paris") {
+    question.innerHTML = "Correct! Paris is the capital of France.";
+  } else {
+    question.innerHTML = "Incorrect. Try again!";
+  }
+}
+
+// Add click event listeners to answers
+answers.forEach(answer => {
+  answer.addEventListener('click', checkAnswer);
+});
+
+  </script>
+</body>
+</html>

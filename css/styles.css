@@ -1,0 +1,23 @@
+body {
+
+  background-color: black;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela {
+
+  background-color: lightcoral;
+  width: 352px;
+  height: 198px;
+  border: white 0.5px solid;
+
+  transform: scale(2);
+}
+
+.canvas {
+
+  image-rendering: pixelated;
+}

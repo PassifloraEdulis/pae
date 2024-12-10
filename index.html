@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>professorees demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/MensagemTexto.css" rel="stylesheet">
+    <link href="css/Transicao.css" rel="stylesheet">
+    <link href="css/KeyboardMenu.css" rel="stylesheet">
+    <link href="css/Hud.css" rel="stylesheet">
+    <link href="css/TitleScreen.css" rel="stylesheet">
+
+    <link href="css/Batalha.css" rel="stylesheet">
+    <link href="css/Combatente.css" rel="stylesheet">
+    <link href="css/SubmissionMenu.css" rel="stylesheet">
+    <link href="css/Time.css" rel="stylesheet">
+    <link href="css/Menus.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="tela">
+
+        <canvas class='canvas' width='352' height='198'></canvas>
+    </div>
+
+</body>
+
+<script src="Conteudo/professores.js"></script>
+<script src="Conteudo/actions.js"></script>
+<script src="Conteudo/chefes.js"></script>
+
+<script src="Estado/PlayerState.js"></script>
+
+<script src="utils.js"></script>
+<script src="Direcao.js"></script>
+<script src="Mundo.js"></script>
+<script src="Objeto.js"></script>
+<script src="Pessoa.js"></script>
+<script src="ProfessorStone.js"></script>
+<script src="Sprite.js"></script>
+<script src="MundoEvento.js"></script>
+<script src="Mapa.js"></script>
+<script src="Conteudo/mapas.js"></script>
+<script src="MensagemTexto.js"></script>
+<script src="TeclaApertada.js"></script>
+<script src="RevelandoTexto.js"></script>
+<script src="Transicao.js"></script>
+<script src="KeyboardMenu.js"></script>
+<script src="Hud.js"></script>
+<script src="PauseMenu.js"></script>
+<script src="CraftingMenu.js"></script>
+<script src="Progresso.js"></script>
+<script src="TitleScreen.js"></script>
+
+<script src="Batalha/Batalha.js"></script>
+<script src="Batalha/Combatente.js"></script>
+<script src="Batalha/Time.js"></script>
+<script src="Batalha/SubmissionMenu.js"></script>
+<script src="Batalha/ReplacementMenu.js"></script>
+<script src="Batalha/BatalhaEvento.js"></script>
+<script src="Batalha/TurnCycle.js"></script>
+<script src="Batalha/BatalhaAnimacoes.js"></script>
+
+<script src="Principal.js"></script>
+
+<script>
+    const tela = document.querySelector(".tela");
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "f" || event.key === "F") {
+            if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement) {
+                // Está em tela cheia, então saia da tela cheia
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            } else {
+                // Não está em tela cheia, então entre em tela cheia
+                if (tela.requestFullscreen) {
+                    tela.requestFullscreen();
+                } else if (tela.mozRequestFullScreen) {
+                    tela.mozRequestFullScreen();
+                } else if (tela.webkitRequestFullscreen) {
+                    tela.webkitRequestFullscreen();
+                } else if (tela.msRequestFullscreen) {
+                    tela.msRequestFullscreen();
+                }
+            }
+        }
+    });
+</script>
+
+</html>

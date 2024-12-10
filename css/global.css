@@ -1,0 +1,56 @@
+:root {
+  --border-color: #291D4D;
+  --dialog-background: #FFF3B4;
+  --menu-background: #FFE8D2;
+  --menu-border-color: #A48465;
+  --menu-font-color: #3A160D;
+  --menu-selected-background: #7fc2ff;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Silkscreen', sans-serif
+}
+
+body {
+
+  background: linear-gradient(45deg, hsl(283, 94%, 34%), hsl(39, 100%, 50%)); /* Cores iniciais */
+  background-size: 300% 300%; /* Tamanho maior do que o necessário */
+  animation: movimentoGradiente 10s linear infinite;  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
+}
+
+.tela {
+
+  /* background-color: lightcoral; */
+  width: 352px;
+  height: 198px;
+  border: white 2px solid;
+  position: relative;
+  transform: scale(2);
+  display: flex;
+  justify-content: center;
+}
+
+.canvas {
+
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+@keyframes movimentoGradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

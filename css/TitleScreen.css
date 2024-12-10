@@ -1,0 +1,58 @@
+.TitleScreen {
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  image-rendering: pixelated;
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TitleScreen_logo {
+
+  display: block;
+  /* margin: 0 auto; */
+  width: 200px;
+  background: transparent;
+  image-rendering: pixelated;
+  border: 2px solid white;
+  margin-top: 5px;
+
+}
+
+.TitleScreen .KeyboardMenu {
+  position: relative;
+  top: 2px;
+  height: 250px;
+  margin-top: 5px; 
+  border: 0;
+  display: flex;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.TitleScreen button {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 2px;
+  width: 120px;
+  
+}
+
+.TitleScreen .DescriptionBox {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  text-align: center;
+  bottom: 2px;
+  margin: 0 auto;
+
+}
